@@ -14,7 +14,7 @@ class FormularioLogin(QtWidgets.QMainWindow):
                 
         self.show()
         
-    def iniciar(self):
+    def iniciar(self2):
         username = self.txt_user.text()
         password = self.txt_password.text()
 
