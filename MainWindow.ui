@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>502</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>502</width>
+    <height>520</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>502</width>
+    <height>520</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Multiventas Kristelle</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>icon/market-Logo.png</normaloff>icon/market-Logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:0.988, y1:0.471591, x2:0.0227273, y2:0.477, stop:0.00568182 rgba(97, 96, 144, 255), stop:0.994318 rgba(141, 142, 192, 255));</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QWidget" name="widget" native="true">
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>182</x>
+         <y>42</y>
+         <width>127</width>
+         <height>99</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.045, y1:1, x2:1, y2:0.215909, stop:0 rgba(90, 98, 136, 0), stop:0.625 rgba(255, 255, 255, 0));</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>icon/user.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_user">
+       <property name="geometry">
+        <rect>
+         <x>168</x>
+         <y>210</y>
+         <width>169</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(231, 231, 231);
+border-radius: 10px;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>USUARIO</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_password">
+       <property name="geometry">
+        <rect>
+         <x>168</x>
+         <y>266</y>
+         <width>169</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(231, 231, 231);
+border-radius: 10px;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>CONTRASEÑA</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_login_init">
+       <property name="geometry">
+        <rect>
+         <x>196</x>
+         <y>336</y>
+         <width>113</width>
+         <height>43</height>
+        </rect>
+       </property>
+       <property name="sizeIncrement">
+        <size>
+         <width>0</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>14</pointsize>
+        </font>
+       </property>
+       <property name="cursor">
+        <cursorShape>PointingHandCursor</cursorShape>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(59, 59, 59);
+color: rgb(255, 255, 255);
+border-radius: 20px;
+</string>
+       </property>
+       <property name="text">
+        <string>Iniciar</string>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoDefault">
+        <bool>false</bool>
+       </property>
+       <property name="default">
+        <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_contenedor">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>84</x>
+         <y>84</y>
+         <width>323</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.045, y1:1, x2:0.966, y2:0.0795455, stop:0 rgba(55, 69, 136, 255), stop:0.886364 rgba(198, 202, 234, 255));
+border-radius: 50px;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_login">
+       <property name="geometry">
+        <rect>
+         <x>112</x>
+         <y>154</y>
+         <width>267</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Stencil Std</family>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(0, 0, 0, 0), stop:0.373979 rgba(0, 0, 0, 0), stop:0.373991 rgba(0, 0, 0, 0), stop:0.624043 rgba(0, 0, 0, 0), stop:0.681818 rgba(0, 0, 0, 0), stop:1 rgba(0, 0, 0, 0));</string>
+       </property>
+       <property name="text">
+        <string>Login</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="icon_user">
+       <property name="geometry">
+        <rect>
+         <x>126</x>
+         <y>210</y>
+         <width>29</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.045, y1:1, x2:1, y2:0.215909, stop:0 rgba(90, 98, 136, 0), stop:0.625 rgba(255, 255, 255, 0));</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>icon/user-account.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="QLabel" name="icon_password">
+       <property name="geometry">
+        <rect>
+         <x>126</x>
+         <y>266</y>
+         <width>28</width>
+         <height>28</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: qlineargradient(spread:reflect, x1:0.045, y1:1, x2:1, y2:0.215909, stop:0 rgba(90, 98, 136, 0), stop:0.625 rgba(255, 255, 255, 0));</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap>icon/iconlock.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <zorder>lbl_contenedor</zorder>
+      <zorder>lbl_login</zorder>
+      <zorder>btn_login_init</zorder>
+      <zorder>txt_user</zorder>
+      <zorder>txt_password</zorder>
+      <zorder>icon_user</zorder>
+      <zorder>icon_password</zorder>
+      <zorder>label</zorder>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizeGripEnabled">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
