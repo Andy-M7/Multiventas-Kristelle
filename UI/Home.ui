@@ -86,7 +86,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_2">
+        <widget class="QPushButton" name="btn_menu_bar">
          <property name="minimumSize">
           <size>
            <width>40</width>
@@ -134,7 +134,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="btn_minimizar">
          <property name="minimumSize">
           <size>
            <width>40</width>
@@ -166,7 +166,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="pushButton_13">
+        <widget class="QPushButton" name="btn_close">
          <property name="minimumSize">
           <size>
            <width>40</width>

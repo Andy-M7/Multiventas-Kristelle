@@ -4,5 +4,5 @@ from vista.login import Login
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
-    Window = Login()
-    app.exec()
+    ventana_login = Login()
+    app.exec_()
