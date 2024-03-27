@@ -52,53 +52,10 @@
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>icon/user.png</pixmap>
+        <pixmap>../icon/user.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="txt_user">
-       <property name="geometry">
-        <rect>
-         <x>168</x>
-         <y>210</y>
-         <width>169</width>
-         <height>29</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(231, 231, 231);
-border-radius: 10px;</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="placeholderText">
-        <string>USUARIO</string>
-       </property>
-       <property name="clearButtonEnabled">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="txt_password">
-       <property name="geometry">
-        <rect>
-         <x>168</x>
-         <y>266</y>
-         <width>169</width>
-         <height>29</height>
-        </rect>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">background-color: rgb(231, 231, 231);
-border-radius: 10px;</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-       <property name="placeholderText">
-        <string>CONTRASEÑA</string>
        </property>
       </widget>
       <widget class="QPushButton" name="btn_login_init">
@@ -225,7 +182,7 @@ border-radius: 50px;</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>icon/user-account.png</pixmap>
+        <pixmap>../icon/user-account.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
@@ -247,20 +204,87 @@ border-radius: 50px;</string>
         <string/>
        </property>
        <property name="pixmap">
-        <pixmap>icon/iconlock.png</pixmap>
+        <pixmap>../icon/iconlock.png</pixmap>
        </property>
        <property name="scaledContents">
         <bool>true</bool>
        </property>
       </widget>
+      <widget class="QLineEdit" name="txt_user">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>168</x>
+         <y>210</y>
+         <width>169</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(231, 231, 231);
+border-radius: 10px;</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>USUARIO</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QLineEdit" name="txt_password">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>168</x>
+         <y>266</y>
+         <width>169</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::StrongFocus</enum>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(231, 231, 231);
+border-radius: 10px;</string>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+       <property name="placeholderText">
+        <string>CONTRASEÑA</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>false</bool>
+       </property>
+      </widget>
       <zorder>lbl_contenedor</zorder>
       <zorder>lbl_login</zorder>
       <zorder>btn_login_init</zorder>
-      <zorder>txt_user</zorder>
-      <zorder>txt_password</zorder>
       <zorder>icon_user</zorder>
       <zorder>icon_password</zorder>
       <zorder>label</zorder>
+      <zorder>txt_user</zorder>
+      <zorder>txt_password</zorder>
      </widget>
     </item>
    </layout>
