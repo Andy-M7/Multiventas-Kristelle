@@ -11,22 +11,10 @@ class Home(QtWidgets.QMainWindow):
         self.btn_minimizar.clicked.connect(self.minimizar)
 
         # Ocultar barra de tareas
-        self.setWindowFlag(Qt.FramelessWindowHint)
+        #self.setWindowFlag(Qt.FramelessWindowHint)
         
     def cerrar(self):
         self.close()
 
-    def minimizar(self):
-        self.setWindowState(Qt.WindowMinimized)
-
-        
-    #    self.btnProductos.clicked.connect(self.AbrirVentanaProductos)
-    #    self.btnClientes.clicked.connect(self.AbrirVentanaClientes)
-        
-    #def AbrirVentanaProductos (self):
-    #    vproductos = VentanaProductos(self)
-    #    vproductos.show()
-        
-    #def AbrirVentanaClientes (self):
-    #    vclientes = VentanaClientes(self)
-    #    vclientes.show()   
+    #def minimizar(self):
+    #    self.setWindowState(Qt.WindowMinimized)
