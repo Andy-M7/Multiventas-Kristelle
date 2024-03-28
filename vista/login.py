@@ -10,7 +10,7 @@ class Login(QtWidgets.QMainWindow):
         uic.loadUi(qtCreatorFile, self)
 
         self.show()
-        #self.btn_login_init.clicked.connect(self.iniciarSesion)
+        self.btn_login_init.clicked.connect(self.iniciarSesion)
     
 
     def iniciarSesion(self):

@@ -8,7 +8,7 @@ class Home(QtWidgets.QMainWindow):
         uic.loadUi("UI/Home.ui", self) 
 
         self.btn_close.clicked.connect(self.cerrar)
-        self.btn_minimizar.clicked.connect(self.minimizar)
+    #    self.btn_minimizar.clicked.connect(self.minimizar)
 
         # Ocultar barra de tareas
         #self.setWindowFlag(Qt.FramelessWindowHint)
