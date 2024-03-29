@@ -1,3 +1,4 @@
+# codigos de referencias
 import sys, time
 from PyQt5 import QtWidgets, uic
 from PyQt5.QtWidgets import QPushButton
@@ -54,3 +55,19 @@ if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)
     window = FormularioLogin()
     sys.exit(app.exec())
+
+
+    def mover_menu(self):
+        if True:
+            width = self.frame_menu.width()
+            normal = 0
+            if width == 0:
+                extender = 400
+            else:
+                extender = normal
+            self.animacion = QPropertyAnimation(self.frame_menu, b'minimumWidth')
+            self.animacion.setDuration(300)
+            self.animacion.setStartValue(width)
+            self.animacion.setEndValue(extender)
+            self.animacion.setEasingCurve(QtCore.QEasingCurve.InOutQuart)
+            self.animacion.start()

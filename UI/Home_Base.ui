@@ -71,7 +71,7 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_3">
        <property name="spacing">
-        <number>6</number>
+        <number>8</number>
        </property>
        <property name="leftMargin">
         <number>0</number>
@@ -80,7 +80,7 @@
         <number>0</number>
        </property>
        <property name="rightMargin">
-        <number>6</number>
+        <number>0</number>
        </property>
        <property name="bottomMargin">
         <number>0</number>
@@ -89,42 +89,12 @@
         <widget class="QLabel" name="MarginOcultar">
          <property name="minimumSize">
           <size>
-           <width>194</width>
-           <height>35</height>
+           <width>189</width>
+           <height>0</height>
           </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>35</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <family>Arial Black</family>
-           <pointsize>14</pointsize>
-           <weight>75</weight>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="toolTipDuration">
-          <number>-1</number>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::RightToLeft</enum>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">color: rgb(255, 255, 255);
-</string>
          </property>
          <property name="text">
-          <string>MENÚ</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="margin">
-          <number>-7</number>
+          <string/>
          </property>
         </widget>
        </item>
@@ -141,9 +111,6 @@
            <width>40</width>
            <height>35</height>
           </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
           <string notr="true">border-radius: 10px;</string>
@@ -193,9 +160,6 @@
            <height>35</height>
           </size>
          </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
-         </property>
          <property name="styleSheet">
           <string notr="true">border-radius: 10px;</string>
          </property>
@@ -205,46 +169,6 @@
          <property name="icon">
           <iconset>
            <normaloff>../icon/minimize.png</normaloff>../icon/minimize.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>40</width>
-           <height>35</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_maximizar">
-         <property name="styleSheet">
-          <string notr="true">border-radius: 10px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../icon/maximizar.png</normaloff>../icon/maximizar.png</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>40</width>
-           <height>35</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="btn_restaurar">
-         <property name="styleSheet">
-          <string notr="true">border-radius: 10px;</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset>
-           <normaloff>../icon/restaurar.png</normaloff>../icon/restaurar.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -267,9 +191,6 @@
            <width>40</width>
            <height>35</height>
           </size>
-         </property>
-         <property name="cursor">
-          <cursorShape>PointingHandCursor</cursorShape>
          </property>
          <property name="styleSheet">
           <string notr="true">border-radius: 10px;</string>
@@ -314,7 +235,10 @@
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_2">
        <property name="spacing">
-        <number>13</number>
+        <number>0</number>
+       </property>
+       <property name="sizeConstraint">
+        <enum>QLayout::SetDefaultConstraint</enum>
        </property>
        <property name="leftMargin">
         <number>0</number>
@@ -330,17 +254,11 @@
        </property>
        <item>
         <widget class="QFrame" name="frame_menu">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="baseSize">
+         <property name="maximumSize">
           <size>
-           <width>0</width>
-           <height>0</height>
+           <width>400</width>
+           <height>16777215</height>
           </size>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
          </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(0, 105, 157);</string>
@@ -354,9 +272,12 @@
          <property name="lineWidth">
           <number>0</number>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout">
+         <layout class="QVBoxLayout" name="verticalLayout_7">
           <property name="spacing">
            <number>0</number>
+          </property>
+          <property name="sizeConstraint">
+           <enum>QLayout::SetDefaultConstraint</enum>
           </property>
           <property name="leftMargin">
            <number>0</number>
@@ -377,7 +298,7 @@
             </property>
             <property name="minimumSize">
              <size>
-              <width>180</width>
+              <width>160</width>
               <height>40</height>
              </size>
             </property>
@@ -399,9 +320,6 @@
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
-            <property name="margin">
-             <number>-60</number>
-            </property>
            </widget>
           </item>
           <item>
@@ -414,13 +332,13 @@
               <property name="minimumSize">
                <size>
                 <width>75</width>
-                <height>95</height>
+                <height>89</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>130</width>
-                <height>220</height>
+                <width>140</width>
+                <height>150</height>
                </size>
               </property>
               <property name="text">
@@ -500,7 +418,7 @@
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>35</height>
+              <height>50</height>
              </size>
             </property>
             <property name="font">
@@ -668,7 +586,7 @@ QPushButton:hover{
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>35</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -776,7 +694,7 @@ QPushButton:hover{
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>35</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -884,7 +802,7 @@ QPushButton:hover{
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>35</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -992,7 +910,7 @@ QPushButton:hover{
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>35</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -1048,7 +966,7 @@ QPushButton:hover{
              </widget>
             </item>
             <item>
-             <spacer name="verticalSpacer_2">
+             <spacer name="Barra_DeMenuEspace">
               <property name="orientation">
                <enum>Qt::Vertical</enum>
               </property>
@@ -1063,26 +981,13 @@ QPushButton:hover{
            </layout>
           </item>
           <item>
-           <spacer name="Barra_DeMenuEspace">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>13</width>
-              <height>328</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="lyu7">
+           <layout class="QVBoxLayout" name="verticalLayout">
             <item>
              <widget class="QPushButton" name="btn_SessionClose">
               <property name="minimumSize">
                <size>
                 <width>0</width>
-                <height>35</height>
+                <height>40</height>
                </size>
               </property>
               <property name="font">
@@ -1134,11 +1039,17 @@ QPushButton:hover{
            <height>0</height>
           </size>
          </property>
+         <property name="maximumSize">
+          <size>
+           <width>922</width>
+           <height>16777215</height>
+          </size>
+         </property>
          <property name="styleSheet">
           <string notr="true">background-color: rgb(0, 170, 255);</string>
          </property>
          <property name="currentIndex">
-          <number>1</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="page_3">
           <layout class="QGridLayout" name="gridLayout">
