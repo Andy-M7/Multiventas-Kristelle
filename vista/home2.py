@@ -1,6 +1,7 @@
 #codigo de prueba
 from PyQt5 import QtWidgets, uic
-from controlador.barraMenu import Barra_titulo
+from controlador.titleBar import Barra_titulo
+from controlador.menuBar import Barra_Menu
 
 class Home(QtWidgets.QMainWindow):
     
@@ -10,16 +11,8 @@ class Home(QtWidgets.QMainWindow):
         uic.loadUi("UI/Home.ui", self) 
 
         # Configurar la barra de título personalizada
-        self.title_bar = Barra_titulo(self)
+        self.barra_titulo = Barra_titulo(self)
 
-        # Menu lateral
-        self.btn_menu_bar.clicked.connect(self.mover_menu)
-
-    def mover_menu(self):
-        if self.frame_menu.isVisible():
-            self.frame_menu.hide()
-            self.MarginOcultar.hide()
-        else:
-            self.frame_menu.show()
-            self.MarginOcultar.show()
-
+        # Configurar la barra de menú personalizada
+        self.barra_menu = Barra_Menu(self)
+        #self.setCentralWidget(self.barra_menu) 

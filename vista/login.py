@@ -1,5 +1,6 @@
 from PyQt5 import QtWidgets, uic
-from vista.home import Home
+from vista.home2 import Home
+from PyQt5.QtGui import QIcon
 
 qtCreatorFile = "UI/Login.ui"
 UI_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
@@ -8,9 +9,11 @@ class Login(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super(Login, self).__init__(parent)
         uic.loadUi(qtCreatorFile, self)
+      
 
         self.show()
         self.btn_login_init.clicked.connect(self.iniciarSesion)
+        self.setWindowIcon(QIcon("./icon/miapp.ico"))
     
 
     def iniciarSesion(self):
