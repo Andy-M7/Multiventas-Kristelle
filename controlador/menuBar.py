@@ -68,10 +68,8 @@ class Barra_Menu(QWidget):
     def menu_config(self):
         if self.parent.btn_Empresa.isHidden():
             self.parent.btn_Empresa.show()
-            self.parent.btn_nuevo_usuario.show()
         else:
             self.parent.btn_Empresa.hide()
-            self.parent.btn_nuevo_usuario.hide()
 
     def cerrar_session(self):
         self.parent.close()

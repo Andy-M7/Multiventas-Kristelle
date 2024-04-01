@@ -5,7 +5,16 @@ class Paginas(QWidget):
         super(Paginas, self).__init__(parent)
         self.parent = parent
 
+        self.parent.btn_inicio.clicked.connect(self.mostrar_pagina)
         self.parent.btn_lista_usuario.clicked.connect(self.mostrar_pagina)
+        self.parent.btn_nuevo_usuario.clicked.connect(self.mostrar_pagina)
+        self.parent.btn_ListCliente.clicked.connect(self.mostrar_pagina)
+        self.parent.btn_NewCliente.clicked.connect(self.mostrar_pagina)
+        self.parent.btn_ListProductos.clicked.connect(self.mostrar_pagina)
+        self.parent.btn_Newproductos.clicked.connect(self.mostrar_pagina)
+        self.parent.btn_ListVentas.clicked.connect(self.mostrar_pagina)
+        self.parent.btn_NewVentas.clicked.connect(self.mostrar_pagina)
+        self.parent.btn_Empresa.clicked.connect(self.mostrar_pagina)
 
     def capturar_pagina(self, button):
         if button == self.parent.btn_inicio:
@@ -14,7 +23,7 @@ class Paginas(QWidget):
             pagname = "page_user_list"
         elif button == self.parent.btn_nuevo_usuario:
             pagname = "page_new_user"
-        elif button == self.parent.btn_clientes:
+        elif button == self.parent.btn_ListCliente:
             pagname = "page_client_list"
         elif button == self.parent.btn_NewCliente:
             pagname = "page_new_client"
@@ -26,7 +35,7 @@ class Paginas(QWidget):
             pagname = "page_sold_list"
         elif button == self.parent.btn_NewVentas:
             pagname = "page_new_sold"
-        elif button == self.parent.btn_Config:
+        elif button == self.parent.btn_Empresa:
             pagname = "page_empresa"
         else:
             pagname = None
