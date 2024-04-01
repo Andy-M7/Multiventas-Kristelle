@@ -2,6 +2,7 @@ import sys
 from PyQt5 import QtWidgets
 from vista.login import Login
 from PyQt5.QtGui import QIcon
+from controlador.menuBar import Barra_Menu
 
 if __name__ == "__main__":
     app = QtWidgets.QApplication(sys.argv)

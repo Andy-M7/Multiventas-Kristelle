@@ -450,7 +450,7 @@
               <property name="maximumSize">
                <size>
                 <width>130</width>
-                <height>220</height>
+                <height>130</height>
                </size>
               </property>
               <property name="text">
@@ -476,6 +476,12 @@
                <size>
                 <width>100</width>
                 <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>130</height>
                </size>
               </property>
               <property name="font">
@@ -1168,9 +1174,9 @@ QPushButton:hover{
           <string notr="true">background-color: rgb(0, 170, 255);</string>
          </property>
          <property name="currentIndex">
-          <number>0</number>
+          <number>9</number>
          </property>
-         <widget class="QWidget" name="page_3">
+         <widget class="QWidget" name="page_inicio">
           <layout class="QGridLayout" name="gridLayout">
            <item row="2" column="0">
             <widget class="QLabel" name="lbl_Logo">
@@ -1196,7 +1202,7 @@ QPushButton:hover{
               <string notr="true">background-color: rgb(85, 255, 127);</string>
              </property>
              <property name="text">
-              <string>Logo</string>
+              <string>inicio</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -1205,7 +1211,202 @@ QPushButton:hover{
            </item>
           </layout>
          </widget>
-         <widget class="QWidget" name="page_1">
+         <widget class="QWidget" name="page_user_list">
+          <widget class="QLabel" name="lbl_Logo_2">
+           <property name="geometry">
+            <rect>
+             <x>378</x>
+             <y>322</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>128</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 255, 127);</string>
+           </property>
+           <property name="text">
+            <string>user_list</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_new_user">
+          <widget class="QLabel" name="lbl_Logo_3">
+           <property name="geometry">
+            <rect>
+             <x>378</x>
+             <y>252</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>128</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 255, 127);</string>
+           </property>
+           <property name="text">
+            <string>new_user</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_client_list">
+          <widget class="QLabel" name="lbl_Logo_4">
+           <property name="geometry">
+            <rect>
+             <x>392</x>
+             <y>448</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>128</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 255, 127);</string>
+           </property>
+           <property name="text">
+            <string>client_list</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_new_client">
+          <widget class="QLabel" name="lbl_Logo_5">
+           <property name="geometry">
+            <rect>
+             <x>364</x>
+             <y>266</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>128</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 255, 127);</string>
+           </property>
+           <property name="text">
+            <string>new_client</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_product_list">
+          <widget class="QLabel" name="lbl_Logo_6">
+           <property name="geometry">
+            <rect>
+             <x>420</x>
+             <y>350</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>128</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 255, 127);</string>
+           </property>
+           <property name="text">
+            <string>product_list</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_new_product">
           <layout class="QHBoxLayout" name="horizontalLayout_4">
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -2164,6 +2365,123 @@ background-color: rgb(151, 188, 255);</string>
             </layout>
            </item>
           </layout>
+         </widget>
+         <widget class="QWidget" name="page_sold_list">
+          <widget class="QLabel" name="lbl_Logo_7">
+           <property name="geometry">
+            <rect>
+             <x>378</x>
+             <y>308</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>128</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 255, 127);</string>
+           </property>
+           <property name="text">
+            <string>sold_list</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_new_sold">
+          <widget class="QLabel" name="lbl_Logo_8">
+           <property name="geometry">
+            <rect>
+             <x>364</x>
+             <y>308</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>128</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 255, 127);</string>
+           </property>
+           <property name="text">
+            <string>new_sold</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </widget>
+         <widget class="QWidget" name="page_empresa">
+          <widget class="QLabel" name="lbl_Logo_9">
+           <property name="geometry">
+            <rect>
+             <x>350</x>
+             <y>322</y>
+             <width>150</width>
+             <height>150</height>
+            </rect>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>128</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>150</width>
+             <height>150</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(85, 255, 127);</string>
+           </property>
+           <property name="text">
+            <string>empresa</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
          </widget>
         </widget>
        </item>

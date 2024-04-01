@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import QWidget
 from PyQt5.QtGui import QIcon
 
 class Barra_titulo(QWidget):
-    def __init__(self, parent=None):
+    def __init__(self, parent):
         super(Barra_titulo, self).__init__(parent)
         self.parent = parent
 

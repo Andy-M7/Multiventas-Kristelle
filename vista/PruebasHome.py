@@ -1,3 +1,4 @@
+#Codigo Pruebas
 import sys
 from PyQt5 import QtWidgets, uic, QtGui, QtCore
 from PyQt5.QtCore import QThread, Qt, QEvent, QPropertyAnimation
@@ -52,10 +53,10 @@ class Home(QtWidgets.QMainWindow):
     def mover_menu(self):
         if self.frame_menu.isVisible():
             self.frame_menu.hide()
-            self.MarginOcultar.hide()
+            self.lbl_menu1.hide()
         else:
             self.frame_menu.show()
-            self.MarginOcultar.show()
+            self.lbl_menu1.show()
 
     def resizeEvent(self, event):
         rect = self.rect()
