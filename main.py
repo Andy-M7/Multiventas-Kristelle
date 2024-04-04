@@ -1,11 +1,11 @@
 import sys
-from PyQt5 import QtWidgets
+from PyQt5.QtWidgets import QApplication
 from vista.login import Login
-from PyQt5.QtGui import QIcon
+from vista.home import Home
 
 if __name__ == "__main__":
-    app = QtWidgets.QApplication(sys.argv)
-    app.setWindowIcon(QIcon('icon/miapp.ico'))
-    ventana_login = Login()
-    ventana_login.show()
+    app = QApplication(sys.argv)
+    login_window = Login()
+    login_window.show()
+    home_window = Home()
     sys.exit(app.exec_())

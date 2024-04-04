@@ -1,8 +1,7 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QPushButton, QLabel,QFrame
 
-class Barra_Menu(QWidget):
-    def __init__(self, parent=None):
-        super(Barra_Menu, self).__init__(parent)
+class Barra_Menu:
+    def __init__(self, parent):
         self.parent = parent
         
         # Ocultar los botones al inicio
@@ -17,13 +16,13 @@ class Barra_Menu(QWidget):
         self.parent.btn_Empresa.hide()
         self.parent.btn_nuevo_usuario.hide()
 
-        parent.btn_menu_bar.clicked.connect(self.mover_menu)
-        parent.btn_usuario.clicked.connect(self.menu_usuario)
-        parent.btn_Clientes.clicked.connect(self.menu_cliente)
-        parent.btn_Productos.clicked.connect(self.menu_producto)
-        parent.btn_Ventas.clicked.connect(self.menu_venta)
-        parent.btn_Config.clicked.connect(self.menu_config)
-        parent.btn_SessionClose.clicked.connect(self.cerrar_session)
+        self.parent.btn_menu_bar.clicked.connect(self.mover_menu)
+        self.parent.btn_usuario.clicked.connect(self.menu_usuario)
+        self.parent.btn_Clientes.clicked.connect(self.menu_cliente)
+        self.parent.btn_Productos.clicked.connect(self.menu_producto)
+        self.parent.btn_Ventas.clicked.connect(self.menu_venta)
+        self.parent.btn_Config.clicked.connect(self.menu_config)
+        self.parent.btn_SessionClose.clicked.connect(self.cerrar_session)
 
     def mover_menu(self):
         if self.parent.frame_menu.isVisible():

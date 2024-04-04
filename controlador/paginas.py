@@ -1,8 +1,7 @@
 from PyQt5.QtWidgets import QWidget
 
-class Paginas(QWidget):
-    def __init__(self, parent=None):
-        super(Paginas, self).__init__(parent)
+class Paginas:
+    def __init__(self, parent):
         self.parent = parent
 
         self.parent.btn_inicio.clicked.connect(self.mostrar_pagina)
@@ -42,7 +41,7 @@ class Paginas(QWidget):
         return pagname
 
     def mostrar_pagina(self):
-        button = self.sender()
+        button = self.parent.sender()
         if button:
             page_name = self.capturar_pagina(button)
             if page_name:
