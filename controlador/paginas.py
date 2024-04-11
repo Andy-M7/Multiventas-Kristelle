@@ -1,4 +1,4 @@
-from PyQt5.QtWidgets import QWidget
+from PyQt5.QtWidgets import QPushButton
 
 class Paginas:
     def __init__(self, parent):
@@ -10,10 +10,12 @@ class Paginas:
         self.parent.btn_ListCliente.clicked.connect(self.mostrar_pagina)
         self.parent.btn_NewCliente.clicked.connect(self.mostrar_pagina)
         self.parent.btn_ListProductos.clicked.connect(self.mostrar_pagina)
+        self.parent.btn_Consultar_Usuario.clicked.connect(self.user_list)
         self.parent.btn_Newproductos.clicked.connect(self.mostrar_pagina)
         self.parent.btn_ListVentas.clicked.connect(self.mostrar_pagina)
         self.parent.btn_NewVentas.clicked.connect(self.mostrar_pagina)
         self.parent.btn_Empresa.clicked.connect(self.mostrar_pagina)
+        
 
     def capturar_pagina(self, button):
         if button == self.parent.btn_inicio:
@@ -48,3 +50,9 @@ class Paginas:
                 widget = getattr(self.parent, page_name, None)
                 if widget:
                     self.parent.WitgetDatos.setCurrentWidget(widget)
+
+    #probar agregar boton en las celdas
+    def user_list(self):
+        button = QPushButton("Click me")
+        button
+        self.parent.tbl_Usuario.setCellWidget(1, 1, button)

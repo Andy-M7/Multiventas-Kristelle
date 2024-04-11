@@ -1,6 +1,7 @@
-from PyQt5.QtWidgets import QMainWindow
+from PyQt5.QtWidgets import QMainWindow, QMessageBox
 from PyQt5.uic import loadUi
 from vista.home import Home
+from controlador.conexion import DB_conexion
 
 class Login(QMainWindow):
     def __init__(self):
@@ -12,7 +13,26 @@ class Login(QMainWindow):
     def verify_login(self):
         usuario = self.txt_user.text()
         contraseña = self.txt_password.text()
-        if usuario == "admin" and contraseña == "1234":
-            self.home_window = Home()
-            self.home_window.show()
-            self.hide()
+
+        try:
+            # Crear una instancia de DB_conexion con los datos de conexión
+            conexion = DB_conexion( Servidor="localhost",
+                                    Usuario="sa",
+                                    Password="12345",
+                                    Base_Datos="MinimarketKrisstelle")
+            
+            # Verificar usuario
+            if conexion.verificar_usuario(usuario, contraseña):
+                # Inicio de sesión exitoso
+                self.home_window = Home()
+                self.home_window.show()
+                self.hide()
+            else:
+                # Nombre de usuario o contraseña incorrectos
+                QMessageBox.warning(self, "Inicio de Sesión Fallido", "Nombre de usuario o contraseña incorrectos")
+
+            # Cerrar la conexión
+            conexion.cerrar_conexion()
+
+        except Exception as e:
+            QMessageBox.critical(self, "Error", "Error al conectar a la base de datos: {}".format(e))

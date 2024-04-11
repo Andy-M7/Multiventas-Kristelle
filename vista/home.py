@@ -2,9 +2,7 @@ from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtCore import Qt, QEvent
 from PyQt5.QtGui import QIcon
 from PyQt5.uic import loadUi
-from controlador.titleBar import Barra_titulo
-from controlador.menuBar import Barra_Menu
-from controlador.paginas import Paginas
+from controlador import mostrarUsuario, paginas, menuBar, titleBar
 
 
 class Home(QMainWindow):
@@ -13,10 +11,10 @@ class Home(QMainWindow):
         loadUi('UI/Home.ui', self)
         self.login_window = None  # Referencia a la ventana de inicio de sesión
 
-        self.barra_titulo = Barra_titulo(self)
-        self.barra_menu = Barra_Menu(self)
-        self.paginas = Paginas(self)
-        self.barra_titulo = Barra_titulo(self)
+        self.barra_menu = menuBar.Barra_Menu(self)
+        self.paginas = paginas.Paginas(self)
+        self.barra_titulo = titleBar.Barra_titulo(self)
+        self.mostrarUsuario = mostrarUsuario.Mostrar_usuario(self)
 
         self.installEventFilter(self)
         self.windowTitleChanged.connect(self.on_window_state_changed)
