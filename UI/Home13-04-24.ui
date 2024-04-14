@@ -1174,7 +1174,7 @@ QPushButton:hover{
           <string notr="true">background-color: rgb(0, 170, 255);</string>
          </property>
          <property name="currentIndex">
-          <number>7</number>
+          <number>6</number>
          </property>
          <widget class="QWidget" name="page_inicio">
           <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -1916,7 +1916,7 @@ vertical-align:auto;</string>
              <item>
               <widget class="QTableWidget" name="tbl_Usuario">
                <property name="enabled">
-                <bool>true</bool>
+                <bool>false</bool>
                </property>
                <property name="minimumSize">
                 <size>
@@ -1949,6 +1949,18 @@ text-align:auto;
                </column>
                <column>
                 <property name="text">
+                 <string>Nombre</string>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>10</pointsize>
+                  <weight>75</weight>
+                  <bold>true</bold>
+                 </font>
+                </property>
+               </column>
+               <column>
+                <property name="text">
                  <string>Usuario</string>
                 </property>
                 <property name="font">
@@ -1961,19 +1973,7 @@ text-align:auto;
                </column>
                <column>
                 <property name="text">
-                 <string>Contraseña</string>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Nivel</string>
+                 <string>E-mail</string>
                 </property>
                 <property name="font">
                  <font>
@@ -2668,7 +2668,7 @@ vertical-align:auto;</string>
              <item>
               <widget class="QTableWidget" name="tbl_Cliente">
                <property name="enabled">
-                <bool>true</bool>
+                <bool>false</bool>
                </property>
                <property name="minimumSize">
                 <size>
@@ -2726,18 +2726,6 @@ text-align:auto;
                <column>
                 <property name="text">
                  <string>Telefono</string>
-                </property>
-                <property name="font">
-                 <font>
-                  <pointsize>10</pointsize>
-                  <weight>75</weight>
-                  <bold>true</bold>
-                 </font>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>E-mail</string>
                 </property>
                 <property name="font">
                  <font>
@@ -3434,7 +3422,7 @@ vertical-align:auto;</string>
              <item>
               <widget class="QTableWidget" name="tbl_Productos">
                <property name="enabled">
-                <bool>true</bool>
+                <bool>false</bool>
                </property>
                <property name="minimumSize">
                 <size>
@@ -4366,9 +4354,9 @@ vertical-align:auto;</string>
               </spacer>
              </item>
              <item>
-              <widget class="QTableWidget" name="tbl_Venta">
+              <widget class="QTableWidget" name="tbl_Productos_2">
                <property name="enabled">
-                <bool>true</bool>
+                <bool>false</bool>
                </property>
                <property name="minimumSize">
                 <size>
@@ -4719,7 +4707,7 @@ vertical-align:auto;</string>
                <item>
                 <widget class="QTableWidget" name="tbl_P_venta">
                  <property name="enabled">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                  <property name="minimumSize">
                   <size>
@@ -4819,7 +4807,7 @@ text-align:auto;
                <item>
                 <widget class="QTableWidget" name="tbl_venta">
                  <property name="enabled">
-                  <bool>true</bool>
+                  <bool>false</bool>
                  </property>
                  <property name="minimumSize">
                   <size>

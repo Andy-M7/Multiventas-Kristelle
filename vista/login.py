@@ -19,7 +19,7 @@ class Login(QMainWindow):
             conexion = DB_conexion( Servidor="localhost",
                                     Usuario="sa",
                                     Password="12345",
-                                    Base_Datos="MinimarketKrisstelle")
+                                    Base_Datos="MinimarketKristelle")
             
             # Verificar usuario
             if conexion.verificar_usuario(usuario, contraseña):
