@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QMainWindow
 from PyQt5.QtCore import Qt, QEvent
 from PyQt5.QtGui import QIcon
 from PyQt5.uic import loadUi
-from controlador import mostrarUsuario, paginas, menuBar, titleBar, registrarUsuario, registrarCliente, registrarProducto, mostrarCliente
+from controlador import mostrarUsuario, paginas, menuBar, titleBar, registrarUsuario, registrarCliente, registrarProducto, mostrarCliente, mostrarVenta
 
 class Home(QMainWindow):
     def __init__(self):
@@ -18,6 +18,7 @@ class Home(QMainWindow):
         self.registrarProducto = registrarProducto.RegistrarProducto(self)
         self.mostrarUsuario = mostrarUsuario.Mostrar_usuario(self)
         self.mostrarCliente = mostrarCliente.Mostrar_cliente(self)
+        self.mostrarVentas = mostrarVenta.Mostrar_venta(self)
 
         self.installEventFilter(self)
         self.windowTitleChanged.connect(self.on_window_state_changed)
