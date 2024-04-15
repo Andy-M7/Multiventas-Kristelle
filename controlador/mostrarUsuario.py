@@ -14,22 +14,15 @@ class Mostrar_usuario:
 
     def mostrar_todos_usuarios(self):               
         # Obtener todos los usuarios
-        usuarios = conexion.obtener_todos_usuarios()
-        
+        usuarios = conexion.obtener_todos_usuarios() 
         # Mostrar todos los usuarios en la tabla
         for usuario in usuarios:
             self.mostrar_usuario_en_tabla(usuario)
 
-        # Cerrar la conexión
-        #conexion.cerrar_conexion()
-
-    def buscar_usuario(self):
-        
+    def buscar_usuario(self):       
         id_usuario = self.parent.txt_buscar_usuario.text()
-
         # Obtener el usuario por ID
-        usuario = conexion.obtener_usuario(id_usuario)
-        
+        usuario = conexion.obtener_usuario(id_usuario)  
         if usuario:
             # Usuario encontrado
             self.mostrar_usuario_en_tabla(usuario)
@@ -37,8 +30,6 @@ class Mostrar_usuario:
             # Usuario no encontrado
             QMessageBox.warning(self.parent, "Usuario no encontrado", "ID de usuario no existe")
 
-        # Cerrar la conexión
-        conexion.cerrar_conexion()
 
     def mostrar_usuario_en_tabla(self, usuario):
     # Agrega el usuario a la tabla
@@ -48,15 +39,12 @@ class Mostrar_usuario:
         for col_idx, atributo in enumerate(usuario):
             item = QTableWidgetItem(str(atributo))
             self.parent.tbl_Usuario.setItem(row_count, col_idx, item)
-
         # Agregar botones "Actualizar" y "Eliminar" a la fila
         btn_actualizar = QPushButton("Actualizar")
         btn_eliminar = QPushButton("Eliminar")
-
         # Conectar los botones a sus respectivas funciones, pasando el índice de la fila como argumento
         btn_actualizar.clicked.connect(partial(self.actualizar_usuario, row_count))
         btn_eliminar.clicked.connect(partial(self.eliminar_usuario, row_count))
-
         # Agregar los botones a la fila en las columnas respectivas
         self.parent.tbl_Usuario.setCellWidget(row_count, len(usuario), btn_actualizar)
         self.parent.tbl_Usuario.setCellWidget(row_count, len(usuario) + 1, btn_eliminar)
@@ -75,7 +63,6 @@ class Mostrar_usuario:
         item = self.parent.tbl_Usuario.item(row, 0)
         if item is not None:
             valor = item.text()
-
             Mostrar_usuario.mostrar_todos_usuarios
             print(valor)
         else:
