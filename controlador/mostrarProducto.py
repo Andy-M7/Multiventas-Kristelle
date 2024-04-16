@@ -21,17 +21,17 @@ class Mostrar_producto:
 
     def buscar_producto(self):        
         id_usuario = self.parent.txt_buscar_Producto.text()
-        # Obtener el usuario por ID
+        # Obtener el Producto por ID
         producto = conexion.obtener_producto(id_usuario)
         if producto:
-            # Usuario encontrado
+            # Producto encontrado
             self.mostrar_producto_en_tabla(producto)
         else:
-            # Usuario no encontrado
+            # Producto no encontrado
             QMessageBox.warning(self.parent, "Producto no encontrado", "ID de Producto no existe")
 
     def mostrar_producto_en_tabla(self, producto):
-    # Agrega el usuario a la tabla
+    # Agrega el Producto a la tabla
         row_count = self.parent.tbl_Productos.rowCount()
         self.parent.tbl_Productos.insertRow(row_count)
         self.parent.tbl_Productos.setEditTriggers(QAbstractItemView.NoEditTriggers)

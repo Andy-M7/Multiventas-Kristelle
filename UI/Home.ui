@@ -4934,11 +4934,6 @@ text-align:auto;
                    </font>
                   </property>
                  </column>
-                 <column>
-                  <property name="text">
-                   <string>dato</string>
-                  </property>
-                 </column>
                 </widget>
                </item>
               </layout>
