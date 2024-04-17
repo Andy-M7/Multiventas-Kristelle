@@ -4584,7 +4584,7 @@ text-align:auto;
                   <string notr="true">border-radius: 60%;</string>
                  </property>
                  <property name="text">
-                  <string>Lista de venta</string>
+                  <string>Nueva venta</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
