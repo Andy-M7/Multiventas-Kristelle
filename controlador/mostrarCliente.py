@@ -22,24 +22,19 @@ class Mostrar_cliente:
         for cliente in clientes:
             self.mostrar_cliente_en_tabla(cliente)
 
-        # Cerrar la conexión
-        #conexion.cerrar_conexion()
-
     def buscar_cliente(self):       
         id_cliente = self.parent.txt_buscar_cliente.text()
 
         # Obtener el Cliente por ID
         cliente = conexion.obtener_cliente(id_cliente)
-        
+        self.parent.tbl_Cliente.clearContents()
+        self.parent.tbl_Cliente.setRowCount(0)
         if cliente:
             # Cliente encontrado
             self.mostrar_cliente_en_tabla(cliente)
         else:
             # Cliente no encontrado
             QMessageBox.warning(self.parent, "Cliente no encontrado", "ID de cliente no existe")
-
-        # Cerrar la conexión
-        conexion.cerrar_conexion()
 
     def mostrar_cliente_en_tabla(self, cliente):
     # Agrega el usuario a la tabla

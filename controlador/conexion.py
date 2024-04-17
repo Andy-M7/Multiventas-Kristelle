@@ -109,6 +109,20 @@ class DB_conexion:
         cursor.close()
         return venta
     
+    def registrar_venta(self, fecha, cliente, vendedor, total):
+        try:
+            self.establecer_conexion()
+            cursor = self.__conexion.cursor()
+            # Query para insertar la venta en la tabla correspondiente
+            query = "INSERT INTO ventas (fecha, cliente, vendedor, total) VALUES (%s, %s, %s, %s)"
+            cursor.execute(query, (fecha, cliente, vendedor, total))
+            self.__conexion.commit()
+            cursor.close()
+            return True  # Retorna True si la venta se registró correctamente
+        except Exception as e:
+            print(f"Error al registrar la venta: {str(e)}")
+            return False  # Retorna False si ocurrió un error al registrar la venta
+        
     # LISTAR PRODUCTO CON CAMPOS PARA VENTA
 
     def obtener_p_venta(self, id_Producto):

@@ -23,6 +23,8 @@ class Mostrar_producto:
         id_usuario = self.parent.txt_buscar_Producto.text()
         # Obtener el Producto por ID
         producto = conexion.obtener_producto(id_usuario)
+        self.parent.tbl_Productos.clearContents()
+        self.parent.tbl_Productos.setRowCount(0)
         if producto:
             # Producto encontrado
             self.mostrar_producto_en_tabla(producto)

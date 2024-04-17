@@ -1,11 +1,14 @@
 from functools import partial
 from controlador.conexion import DB_conexion
 from PyQt5.QtWidgets import QMessageBox, QTableWidgetItem, QPushButton, QAbstractItemView, QComboBox
+from PyQt5.QtCore import QDate
 
 conexion = DB_conexion(Servidor="localhost", 
                                Usuario="sa", 
                                Password="12345", 
                                Base_Datos="MinimarketKristelle")
+
+fecha_actual = QDate.currentDate()
 
 class Mostrar_venta:
     def __init__(self, parent):
@@ -13,6 +16,8 @@ class Mostrar_venta:
         self.parent.btn_ListVentas.clicked.connect(self.mostrar_todas_ventas) # Llamar a la función para mostrar todas las ventas al iniciar       
         self.parent.btn_Consultar_Venta.clicked.connect(self.buscar_venta)
         self.parent.btn_P_venta.clicked.connect(self.buscar_P_venta)
+        self.parent.btn_registra_venta.clicked.connect(self.registrar_venta)
+        self.parent.dt_fecha.setDate(fecha_actual)
 
     def mostrar_todas_ventas(self):               
         # Obtener todas las ventas
@@ -20,8 +25,6 @@ class Mostrar_venta:
         # Mostrar todas las ventas en la tabla
         for venta in ventas:
             self.mostrar_venta_en_tabla(venta)
-        # Cerrar la conexión
-        #conexion.cerrar_conexion()
 
     def buscar_venta(self):      
         id_venta = self.parent.txt_buscar_venta.text()
@@ -33,7 +36,6 @@ class Mostrar_venta:
         else:
             # Venta no encontrada
             QMessageBox.warning(self.parent, "Venta no encontrada", "ID de venta no existe")
-        #conexion.cerrar_conexion()
 
     def mostrar_venta_en_tabla(self, venta):
         # Agrega la venta a la tabla
@@ -86,16 +88,27 @@ class Mostrar_venta:
         #conexion.cerrar_conexion()
 
     def mostrar_P_venta(self, venta):
+        self.parent.tbl_P_venta.clearContents()
+        self.parent.tbl_P_venta.setRowCount(0)
         row_count = self.parent.tbl_P_venta.rowCount()
-        self.parent.tbl_P_venta.insertRow(row_count)
+        self.parent.tbl_P_venta.insertRow(row_count) 
         self.parent.tbl_P_venta.setEditTriggers(QAbstractItemView.NoEditTriggers)
         for col_idx, atributo in enumerate(venta):
             item = QTableWidgetItem(str(atributo))
             self.parent.tbl_P_venta.setItem(row_count, col_idx, item)
+
+        #VERIFICACION DE STOCK
+
         combo_stock = QComboBox()
-        # Aquí debes llenar el QComboBox con los valores de stock disponibles para el producto
-        # Supongamos que tienes una lista llamada stock_disponible con los valores de stock
-        stock_disponible = [1, 2, 3, 4, 5]  # Ejemplo de valores de stock disponibles
+        stock_disponible = []
+        countStock = 0
+        if int(venta[2]) != 0:
+            for i in range(int(venta[2])):
+                countStock += 1
+                stock_disponible.append(countStock)
+        else:  
+            QMessageBox.warning(self.parent, "Producto no encontrado", "No se encontró el producto en la base de datos")
+        
         combo_stock.addItems([str(stock) for stock in stock_disponible])
         self.parent.tbl_P_venta.setCellWidget(row_count, len(venta), combo_stock)
         btn_agregar = QPushButton("Añadir")
@@ -109,16 +122,9 @@ class Mostrar_venta:
             codigo = codigo_item.text()
             cantidad = int(cantidad_combo)  # Convertir la cantidad a entero
             producto, precio = conexion.obtener_precio_producto(codigo)
+            print(codigo)
             if producto and precio:
                 self.insertar_detalle_venta(codigo, producto, cantidad, precio)
-                # Agregar el botón "Remover" a la fila correspondiente en tbl_detalle_venta
-                row_count_detalle = self.parent.tbl_detalle_venta.rowCount()  # Nuevo contador de filas para tbl_detalle_venta
-                col_count_detalle = self.parent.tbl_detalle_venta.columnCount()  # Nuevo contador de columnas para tbl_detalle_venta
-                btn_remover = QPushButton("Remover")
-                btn_remover.clicked.connect(partial(self.remover_venta, row_count_detalle))  # Usar el nuevo contador de filas
-                print("Fila para tbl_detalle_venta:", row_count_detalle)
-                print("Columna para tbl_detalle_venta:", col_count_detalle)
-                self.parent.tbl_detalle_venta.setCellWidget(row_count_detalle, col_count_detalle + 1, btn_remover)
             else:
                 QMessageBox.warning(self.parent, "Producto no encontrado", "No se encontró el producto en la base de datos")
         else:
@@ -129,10 +135,44 @@ class Mostrar_venta:
         nueva_fila = [codigo_producto, nombre_producto, cantidad, precio, subtotal]
         row_count_detalle = self.parent.tbl_detalle_venta.rowCount()  # Nuevo contador de filas para tbl_detalle_venta
         self.parent.tbl_detalle_venta.insertRow(row_count_detalle)
+        btn_remover = QPushButton("Remover")
+        btn_remover.clicked.connect(partial(self.remover_venta, row_count_detalle))
+        self.parent.tbl_detalle_venta.setCellWidget(row_count_detalle, len(nueva_fila), btn_remover)
+
+        self.parent.lbl_Precio.setText(str(precio))
+
         for col_idx, valor in enumerate(nueva_fila):
             item = QTableWidgetItem(str(valor))
             self.parent.tbl_detalle_venta.setItem(row_count_detalle, col_idx, item)
+        
+        # Calcular la suma total de los subtotales
+        total = 0
+        for row in range(row_count_detalle + 1):  # Iterar sobre todas las filas, incluyendo la nueva
+            subtotal_item = self.parent.tbl_detalle_venta.item(row, 4)  # Obtener el item correspondiente al subtotal
+            if subtotal_item:
+                total += float(subtotal_item.text())  # Sumar el subtotal al total
+        
+        # Actualizar el QLabel con el total
+        total_formateado = "{:.2f}".format(total)
+        self.parent.lbl_Precio.setText(total_formateado)
 
     def remover_venta(self, row):
         # Aquí deberías remover la fila correspondiente en tbl_detalle_venta
         pass
+
+    def registrar_venta(self):
+        fecha = self.parent.dt_fecha.date().toString("yyyy-MM-dd")
+        cliente = self.parent.cbo_cliente.currentText()
+        vendedor = "vendedor1"  # Aquí debes obtener el nombre del vendedor
+        total = self.parent.lbl_Precio.text()
+
+        if not (fecha and cliente and vendedor and total):
+            QMessageBox.warning(self.parent, "Campos incompletos", "Por favor, complete todos los campos.")
+            return
+
+
+        exito = conexion.registrar_venta(fecha, cliente, vendedor, total)
+        if exito:
+            QMessageBox.information(self.parent, "Venta registrada", "La venta se ha registrado exitosamente.")
+        else:
+            QMessageBox.critical(self.parent, "Error al registrar venta", "Ocurrió un error al intentar registrar la venta.")

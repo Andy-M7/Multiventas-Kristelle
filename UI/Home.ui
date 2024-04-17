@@ -4001,6 +4001,11 @@ vertical-align:auto;
                    </item>
                    <item>
                     <property name="text">
+                     <string>Limpieza</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
                      <string>Licores</string>
                     </property>
                    </item>
@@ -4735,14 +4740,14 @@ vertical-align:auto;</string>
                  </property>
                  <property name="minimumSize">
                   <size>
-                   <width>600</width>
+                   <width>605</width>
                    <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>300</height>
+                   <height>100</height>
                   </size>
                  </property>
                  <property name="styleSheet">
@@ -4854,7 +4859,7 @@ text-align:auto;
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>300</height>
+                   <height>400</height>
                   </size>
                  </property>
                  <property name="styleSheet">
@@ -5007,7 +5012,7 @@ text-align:auto;
                 </widget>
                </item>
                <item>
-                <widget class="QDateEdit" name="dateEdit">
+                <widget class="QDateEdit" name="dt_fecha">
                  <property name="styleSheet">
                   <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
@@ -5051,7 +5056,7 @@ text-align:auto;
                 </widget>
                </item>
                <item>
-                <widget class="QComboBox" name="comboBox">
+                <widget class="QComboBox" name="cbo_cliente">
                  <property name="styleSheet">
                   <string notr="true">background-color: rgb(255, 255, 255);</string>
                  </property>
@@ -5067,7 +5072,7 @@ text-align:auto;
                  </item>
                  <item>
                   <property name="text">
-                   <string>New Item</string>
+                   <string/>
                   </property>
                  </item>
                 </widget>
@@ -5084,6 +5089,39 @@ text-align:auto;
                   </size>
                  </property>
                 </spacer>
+               </item>
+               <item>
+                <widget class="QLabel" name="lbl_Precio_2">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>34</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Trajan Pro</family>
+                   <pointsize>12</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border-radius: 60%;</string>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
                </item>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_8">
@@ -5124,7 +5162,7 @@ text-align:auto;
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="lbl_Logo_28">
+                  <widget class="QLabel" name="lbl_Precio">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -5149,7 +5187,7 @@ text-align:auto;
                     <string notr="true">border-radius: 60%;</string>
                    </property>
                    <property name="text">
-                    <string>34</string>
+                    <string>0</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -5157,6 +5195,40 @@ text-align:auto;
                   </widget>
                  </item>
                 </layout>
+               </item>
+               <item>
+                <widget class="QPushButton" name="btn_registra_venta">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>35</height>
+                  </size>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton{
+	background-color: rgb(0, 105, 157);
+	border-radius: 10px;
+	color: white;
+}
+
+QPushButton:hover{
+	background: rgb(0, 117, 176);
+}</string>
+                 </property>
+                 <property name="text">
+                  <string>Registrar Venta</string>
+                 </property>
+                </widget>
                </item>
                <item>
                 <spacer name="verticalSpacer_15">

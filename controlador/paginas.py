@@ -43,6 +43,9 @@ class Paginas:
             pagname = "page_new_client"
 
         elif button == self.parent.btn_ListProductos:
+            self.parent.tbl_Productos.clearContents()
+            self.parent.tbl_Productos.setRowCount(0)    
+            mostrarProducto.Mostrar_producto.mostrar_todos_productos
             pagname = "page_product_list"
 
         elif button == self.parent.btn_Newproductos:

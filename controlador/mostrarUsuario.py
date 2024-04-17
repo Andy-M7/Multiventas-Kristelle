@@ -22,9 +22,11 @@ class Mostrar_usuario:
     def buscar_usuario(self):       
         id_usuario = self.parent.txt_buscar_usuario.text()
         # Obtener el usuario por ID
-        usuario = conexion.obtener_usuario(id_usuario)  
+        usuario = conexion.obtener_usuario(id_usuario)
+        self.parent.tbl_Usuario.clearContents()
+        self.parent.tbl_Usuario.setRowCount(0)
         if usuario:
-            # Usuario encontrado
+            # Usuario encontrado 
             self.mostrar_usuario_en_tabla(usuario)
         else:
             # Usuario no encontrado

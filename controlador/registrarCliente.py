@@ -42,7 +42,7 @@ class RegistrarCliente:
             QMessageBox.information(self.parent, "Registro Exitoso", "Cliente registrado correctamente")
 
             # Limpiar los campos del formulario después del registro
-            self.parent.txt_idEmpleado.clear()
+            self.parent.txt_nombre_cliente.clear()
             self.parent.txt_apellidos_cliente.clear()
             self.parent.txt_telefono_cliente.clear()
             self.parent.txt_email_cliente.clear()

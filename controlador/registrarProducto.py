@@ -12,6 +12,7 @@ class RegistrarProducto:
         precio = self.parent.txt_precio.text()
         stock = self.parent.txt_stock.text()
         presentacion = self.parent.txt_presentacion.text()
+        categoria = self.parent.cbx_categoria.currentText()
 
         try:
             # Datos de conexión a la base de datos
@@ -32,8 +33,8 @@ class RegistrarProducto:
             cursor = conn.cursor()
 
             # Consulta SQL para insertar un nuevo usuario
-            query = "INSERT INTO Productos (nombre, precio, stock, presentacion) VALUES (%s, %s, %s, %s)"
-            cursor.execute(query, (nombre, precio, stock, presentacion))
+            query = "INSERT INTO Productos (nombre, precio, stock, presentacion, categoria) VALUES (%s, %s, %s, %s, %s)"
+            cursor.execute(query, (nombre, precio, stock, presentacion, categoria))
 
             # Confirmar la transacción
             conn.commit()
@@ -42,11 +43,11 @@ class RegistrarProducto:
             QMessageBox.information(self.parent, "Registro Exitoso", "Producto registrado correctamente")
 
             # Limpiar los campos del formulario después del registro
-            self.parent.txt_idEmpleado.clear()
+            self.parent.txt_nombre.clear()
             self.parent.txt_precio.clear()
             self.parent.txt_stock.clear()
             self.parent.txt_presentacion.clear()
-
+            self.parent.cbx_categoria.setCurrentIndex(0)
             # Cerrar la conexión
             conn.close()
 
